@@ -13,7 +13,7 @@
   <style>
     body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
     html { scroll-behavior: smooth; }
-    section { scroll-margin-top: 100px; } /* offset for sticky header */
+    section { scroll-margin-top: 100px; }
   </style>
 </head>
 <body id="top" class="bg-neutral-50 text-neutral-900">
@@ -21,13 +21,12 @@
   <!-- Header -->
   <header class="w-full border-b border-neutral-200 bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center gap-3">
-      <!-- Left: Logo -->
       <a href="#top" class="flex items-center gap-3 shrink-0">
         <img src="assets/james_baker_logo.png" alt="James Baker Realty" class="h-8 w-auto">
         <span class="font-bold tracking-tight text-neutral-900">James Baker Realty</span>
       </a>
 
-      <!-- Center: Nav -->
+      <!-- Nav -->
       <nav class="hidden md:flex items-center gap-6 text-sm mx-6">
         <a href="#top" class="hover:underline font-semibold text-red-600">James Vision</a>
         <a href="#how" class="hover:underline">How it works</a>
@@ -35,7 +34,7 @@
         <a href="#faq" class="hover:underline">FAQ</a>
       </nav>
 
-      <!-- Right: CTAs (now anchor to THIS page) + hamburger -->
+      <!-- CTAs -->
       <div class="ml-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3 shrink-0">
         <a href="#sell-smarter"
            class="inline-flex items-center justify-center rounded-xl px-4 py-2 min-w-[220px] text-center text-white bg-red-600 hover:bg-red-700 shadow-sm">
@@ -45,8 +44,6 @@
            class="inline-flex items-center justify-center rounded-xl px-4 py-2 min-w-[220px] text-center text-white bg-neutral-900 hover:bg-neutral-800 shadow-sm">
           Book a Strategy Session →
         </a>
-
-        <!-- Mobile hamburger -->
         <button id="menuBtn"
                 class="md:hidden inline-flex items-center justify-center rounded-lg p-2 ring-1 ring-neutral-300 hover:bg-neutral-100"
                 aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -92,9 +89,7 @@
   <section class="py-16 bg-neutral-50">
     <div class="max-w-4xl mx-auto px-4 text-center">
       <h2 class="text-2xl md:text-3xl font-bold">A Message from James</h2>
-      <p class="mt-4 text-neutral-700">
-        Watch this short video where James shares his vision for real estate in the Antelope Valley and beyond.
-      </p>
+      <p class="mt-4 text-neutral-700">Watch this short video where James shares his vision for real estate in the Antelope Valley and beyond.</p>
       <div class="mt-8 aspect-video rounded-2xl overflow-hidden ring-1 ring-neutral-200 shadow-sm bg-black">
         <iframe class="w-full h-full"
           src="https://www.youtube.com/embed/VIDEO_ID?rel=0"
@@ -106,7 +101,7 @@
     </div>
   </section>
 
-  <!-- Sell Smarter Section (main destination for red header button) -->
+  <!-- Sell Smarter Section -->
   <section id="sell-smarter" class="py-16 bg-neutral-50 border-t border-neutral-200">
     <div class="max-w-5xl mx-auto px-4">
       <h2 class="text-3xl font-bold">Sell Smarter in California</h2>
@@ -119,22 +114,16 @@
         <li><strong>Strategize</strong> — Pick a Zoom or in-person appointment to map pricing, prep, and marketing.</li>
         <li><strong>List &amp; Launch</strong> — We execute: prep, media, syndication, showings, negotiation, escrow, close.</li>
       </ul>
-      <div class="mt-6 flex gap-4 flex-wrap">
-        <a href="#book" class="inline-block px-5 py-3 bg-red-600 text-white rounded-xl font-semibold hover:bg-red-700">
-          Get the Free Seller Guide
-        </a>
-        <a href="#book" class="inline-block px-5 py-3 bg-neutral-900 text-white rounded-xl font-semibold hover:bg-neutral-800">
-          Book a Strategy Session
-        </a>
-      </div>
       <p class="mt-6 text-neutral-700 max-w-md">
         No obligation. We’ll never sell your data. CA sellers only.
       </p>
-      <p class="text-xs text-neutral-500 mt-2">Prefer reading? Download the PDF guide above.</p>
+      <p class="text-sm text-neutral-600 mt-2">
+        When you’re ready, scroll down to <a href="#book" class="underline hover:no-underline">Book a Strategy Session</a>.
+      </p>
     </div>
   </section>
 
-  <!-- How it works (moved onto this page) -->
+  <!-- How it works -->
   <section id="how" class="py-14 bg-white">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-2xl md:text-3xl font-bold">How it works</h2>
@@ -159,7 +148,7 @@
     </div>
   </section>
 
-  <!-- CTA Band (main destination for black header button) -->
+  <!-- CTA Band -->
   <section id="book" class="py-12 bg-neutral-900 text-neutral-100">
     <div class="max-w-6xl mx-auto px-4 text-center">
       <h2 class="text-2xl md:text-3xl font-bold">Ready to sell smarter?</h2>
@@ -205,27 +194,19 @@
       <div class="mt-8 grid md:grid-cols-2 gap-6">
         <div class="p-6 rounded-2xl border border-neutral-200 bg-neutral-50">
           <h3 class="font-semibold">What’s in the free guide?</h3>
-          <p class="mt-2 text-neutral-700">
-            A step-by-step prep checklist, timeline, net sheet basics, disclosures overview, and our marketing plan.
-          </p>
+          <p class="mt-2 text-neutral-700">A step-by-step prep checklist, timeline, net sheet basics, disclosures overview, and our marketing plan.</p>
         </div>
         <div class="p-6 rounded-2xl border border-neutral-200 bg-neutral-50">
           <h3 class="font-semibold">Is there any obligation?</h3>
-          <p class="mt-2 text-neutral-700">
-            No. The guide and consult are complimentary for CA homeowners.
-          </p>
+          <p class="mt-2 text-neutral-700">No. The guide and consult are complimentary for CA homeowners.</p>
         </div>
         <div class="p-6 rounded-2xl border border-neutral-200 bg-neutral-50">
           <h3 class="font-semibold">Do you work statewide?</h3>
-          <p class="mt-2 text-neutral-700">
-            Yes—Zoom consults statewide; in-person available in select regions. If we’re not the best fit, we’ll refer you.
-          </p>
+          <p class="mt-2 text-neutral-700">Yes—Zoom consults statewide; in-person available in select regions. If we’re not the best fit, we’ll refer you.</p>
         </div>
         <div class="p-6 rounded-2xl border border-neutral-200 bg-neutral-50">
           <h3 class="font-semibold">How do appointments work?</h3>
-          <p class="mt-2 text-neutral-700">
-            Choose an open slot that fits your schedule. You’ll get a confirmation and reminders by email/text.
-          </p>
+          <p class="mt-2 text-neutral-700">Choose an open slot that fits your schedule. You’ll get a confirmation and reminders by email/text.</p>
         </div>
       </div>
     </div>
@@ -238,18 +219,13 @@
         <div class="font-semibold">James Baker Realty, Inc.</div>
         <div class="text-sm mt-1">Broker: James Baker • CalDRE #01295685</div>
         <div class="text-sm">Office: (661) 949-3000</div>
-        <div class="text-sm">
-          Website: <a href="https://avjames.com" class="underline" target="_blank" rel="noopener">avjames.com</a>
-        </div>
-        <div class="text-sm">
-          Email: <a href="mailto:avjames@live.com" class="underline">avjames@live.com</a>
-        </div>
+        <div class="text-sm">Website: <a href="https://avjames.com" class="underline" target="_blank" rel="noopener">avjames.com</a></div>
+        <div class="text-sm">Email: <a href="mailto:avjames@live.com" class="underline">avjames@live.com</a></div>
         <div class="flex items-center gap-2 text-sm mt-2">
           <img src="assets/eho-logo.png" alt="Equal Housing Opportunity" class="h-5 w-auto">
           <span>Equal Housing Opportunity</span>
         </div>
       </div>
-
       <div>
         <div class="font-semibold">Your Representative</div>
         <div class="text-sm mt-1">Jorge Garcia-Fierro • CalDRE #02153868</div>
@@ -257,7 +233,6 @@
         <div class="text-sm">Email: <a href="mailto:jorge@jgfrealtor.com" class="underline">jorge@jgfrealtor.com</a></div>
         <div class="text-sm">Site: <a href="https://www.jgfrealtor.com" class="underline" target="_blank" rel="noopener">jgfrealtor.com</a></div>
       </div>
-
       <div class="text-sm">
         <div>© <span id="year">2025</span> James Baker Realty, Inc. All rights reserved.</div>
         <div class="mt-2">Not intended to solicit properties already listed or clients under contract. Information deemed reliable but not guaranteed. This is not legal or tax advice; consult your advisor.</div>
@@ -265,7 +240,7 @@
       </div>
     </div>
 
-    <!-- Floating Back to Top Button (shows after scroll) -->
+    <!-- Floating Back to Top -->
     <a href="#top" id="backToTop"
        class="fixed bottom-6 right-6 hidden opacity-0 transition-opacity duration-300 inline-flex items-center justify-center w-12 h-12 rounded-full bg-red-600 text-white text-xl shadow-lg hover:bg-red-700">
       ↑
@@ -283,11 +258,9 @@
           icon.textContent = open ? '✕' : '☰';
         });
       }
-
-      // Footer year
+      // Year
       document.getElementById('year').textContent = new Date().getFullYear();
-
-      // Back to Top visibility after scroll
+      // Back to Top button
       const backToTop = document.getElementById('backToTop');
       window.addEventListener('scroll', () => {
         if (window.scrollY > 200) {
