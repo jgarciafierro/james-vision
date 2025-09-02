@@ -13,8 +13,7 @@
   <style>
     body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
     html { scroll-behavior: smooth; }
-    /* 🔥 Fix anchor offset for sticky header */
-    [id] { scroll-margin-top: 120px; }
+    [id] { scroll-margin-top: 120px; } /* ensures anchors show below sticky header */
   </style>
 </head>
 <body id="top" class="bg-neutral-50 text-neutral-900">
@@ -37,7 +36,7 @@
 
       <!-- CTA + hamburger -->
       <div class="ml-auto flex items-center gap-3 shrink-0">
-        <a href="#sell-smarter"
+        <a href="#book"
            class="hidden sm:inline-flex items-center justify-center rounded-xl px-4 py-2 min-w-[220px] text-center text-white bg-red-600 hover:bg-red-700 shadow-sm">
           Get the Free Seller Guide →
         </a>
@@ -57,11 +56,10 @@
         <a href="#reviews" class="py-1 hover:underline">Reviews</a>
         <a href="#faq" class="py-1 hover:underline">FAQ</a>
         <!-- Mobile red button -->
-        <a href="#sell-smarter"
+        <a href="#book"
            class="mt-3 inline-flex items-center justify-center rounded-xl px-4 py-2 text-white bg-red-600 hover:bg-red-700 shadow-sm">
           Get the Free Seller Guide →
         </a>
-        <a href="#book" class="py-2 hover:underline">Book a Session</a>
       </div>
     </div>
   </header>
@@ -114,7 +112,6 @@
         <li><strong>List &amp; Launch</strong> — We execute: prep, media, syndication, showings, negotiation, escrow, close.</li>
       </ul>
       <p class="mt-6 text-neutral-700 max-w-md">No obligation. We’ll never sell your data. CA sellers only.</p>
-      <p class="text-sm text-neutral-600 mt-2">When you’re ready, scroll down to <a href="#book" class="underline hover:no-underline">Book a Strategy Session</a>.</p>
     </div>
   </section>
 
@@ -277,7 +274,6 @@
 
 </body>
 </html>
-``
 
 
 
@@ -285,6 +281,7 @@
  
           
    
+
 
 
 
