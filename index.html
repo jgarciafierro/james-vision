@@ -13,7 +13,8 @@
   <style>
     body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
     html { scroll-behavior: smooth; }
-    section { scroll-margin-top: 100px; }
+    /* 🔥 Fix anchor offset for sticky header */
+    [id] { scroll-margin-top: 120px; }
   </style>
 </head>
 <body id="top" class="bg-neutral-50 text-neutral-900">
@@ -101,7 +102,7 @@
     </div>
   </section>
 
-  <!-- Sell Smarter Section -->
+  <!-- Sell Smarter -->
   <section id="sell-smarter" class="py-16 bg-neutral-50 border-t border-neutral-200">
     <div class="max-w-5xl mx-auto px-4">
       <h2 class="text-3xl font-bold">Sell Smarter in California</h2>
@@ -178,8 +179,6 @@
           <figcaption class="mt-4 text-sm text-neutral-600">— Repeat Client</figcaption>
         </figure>
       </div>
-
-      <!-- Link to full testimonials -->
       <p class="mt-6 text-center">
         <a href="https://avjames.com/testimonials/" target="_blank" rel="noopener"
            class="underline hover:no-underline text-red-600 font-medium">
@@ -278,12 +277,15 @@
 
 </body>
 </html>
+``
+
 
 
       
  
           
    
+
 
 
 
