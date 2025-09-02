@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>James’s Vision — James Baker Realty, Inc.</title>
-  <meta name="description" content="James Baker’s vision plus a practical seller funnel: watch the video, get the free e-book, and book a strategy session (Zoom or in-person)." />
-  <link rel="icon" href="../assets/james_baker_logo.png" />
+  <title>James Baker Realty, Inc.</title>
+  <meta name="description" content="James Baker’s vision for real estate in the Antelope Valley and beyond. Mission, values, how it works, reviews, and FAQs—with links to the free California Home Seller Guide and booking." />
+  <link rel="icon" href="assets/james_baker_logo.png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,34 +21,40 @@
   <!-- Header -->
   <header class="w-full border-b border-neutral-200 bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- Left: Logo -->
       <a href="#top" class="flex items-center gap-3 shrink-0">
-        <!-- Use the logo you have in repo root -->
-        <img src="../James-baker.png" alt="James Baker Realty" class="h-10 w-auto md:h-14">
+        <img src="assets/james_baker_logo.png" alt="James Baker Realty" class="h-10 w-auto md:h-14">
         <span class="font-bold tracking-tight text-neutral-900 text-xl md:text-2xl">James Baker Realty, Inc.</span>
       </a>
+
+      <!-- Center: Nav -->
       <nav class="hidden md:flex flex-1 justify-center items-center gap-8 text-sm font-medium">
-        <a href="#top" class="hover:underline font-semibold text-red-600">James’s Vision</a>
+        <a href="#top" class="hover:underline font-semibold text-red-600">James Vision</a>
         <a href="#how" class="hover:underline">How it works</a>
         <a href="#reviews" class="hover:underline">Reviews</a>
         <a href="#faq" class="hover:underline">FAQ</a>
-        <a href="../sell/?utm_source=james_vision&utm_medium=nav" class="hover:underline">Sell Page</a>
       </nav>
+
+      <!-- Right: Hamburger (mobile only) -->
       <div class="ml-auto md:hidden flex items-center gap-3">
-        <button id="menuBtn" class="inline-flex items-center justify-center rounded-lg p-2 ring-1 ring-neutral-300 hover:bg-neutral-100"
+        <button id="menuBtn"
+                class="inline-flex items-center justify-center rounded-lg p-2 ring-1 ring-neutral-300 hover:bg-neutral-100"
                 aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation">
           <span id="menuIcon" aria-hidden="true">☰</span>
         </button>
       </div>
     </div>
+
+    <!-- Mobile Nav -->
     <div id="mobileNav" class="md:hidden hidden border-t border-neutral-200">
       <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-2 text-sm">
-        <a href="#top" class="py-1 hover:underline font-semibold text-red-600">James’s Vision</a>
+        <a href="#top" class="py-1 hover:underline font-semibold text-red-600">James Vision</a>
         <a href="#how" class="py-1 hover:underline">How it works</a>
         <a href="#reviews" class="py-1 hover:underline">Reviews</a>
         <a href="#faq" class="py-1 hover:underline">FAQ</a>
-        <a href="../sell/?utm_source=james_vision&utm_medium=mobile_nav"
+        <a href="#book"
            class="mt-3 inline-flex items-center justify-center rounded-xl px-4 py-2 text-white bg-red-600 hover:bg-red-700 shadow-sm">
-          Go to Sell Page →
+          Get the Free Seller Guide →
         </a>
       </div>
     </div>
@@ -60,16 +66,16 @@
       <div>
         <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">James’s Vision</h1>
         <p class="mt-6 text-lg text-neutral-700">
-          At <strong>James Baker Realty</strong> we combine integrity, innovation, and service to maximize results for California sellers.
-          The plan is simple: prove authority on video, educate with a free e-book, and let homeowners self-book strategy sessions that turn into listings.
+          Our mission at <strong>James Baker Realty</strong> is to be the #1 real estate brokerage in the Antelope Valley and beyond by combining integrity, innovation, and unmatched service.
         </p>
         <p class="mt-4 text-neutral-700">
-          The content runs on autopilot—webinars and videos do the heavy lifting—so James and the team can serve more clients without sacrificing quality.
+          We are here to empower our agents, uplift our clients, and raise the standard of excellence in every transaction.
         </p>
       </div>
       <div class="flex justify-center">
-        <!-- Use a headshot that exists in your repo root -->
-        <img src="../headshot-final.png" alt="James Baker" class="rounded-2xl shadow-lg max-h-96 w-full object-cover object-top sm:max-w-[420px] mx-auto">
+        <img src="assets/james.png"
+             alt="James Baker"
+             class="rounded-2xl shadow-lg max-h-96 w-full object-cover object-top sm:max-w-[420px] mx-auto">
       </div>
     </div>
   </section>
@@ -78,38 +84,30 @@
   <section class="py-16 bg-neutral-50">
     <div class="max-w-4xl mx-auto px-4 text-center">
       <h2 class="text-2xl md:text-3xl font-bold">A Message from James</h2>
-      <p class="mt-4 text-neutral-700">Watch this short video where James shares how the system works and what to expect.</p>
+      <p class="mt-4 text-neutral-700">Watch this short video where James shares his vision for real estate in the Antelope Valley and beyond.</p>
       <div class="mt-8 aspect-video rounded-2xl overflow-hidden ring-1 ring-neutral-200 shadow-sm bg-black">
-        <!-- Replace VIDEO_ID when you have your YouTube link -->
-        <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID?rel=0"
-                title="James Baker Vision" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+        <iframe class="w-full h-full"
+          src="https://www.youtube.com/embed/VIDEO_ID?rel=0"
+          title="James Baker Vision"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
       </div>
     </div>
   </section>
 
-  <!-- Sell Smarter intro -->
+  <!-- Sell Smarter -->
   <section id="sell-smarter" class="py-16 bg-neutral-50 border-t border-neutral-200">
     <div class="max-w-5xl mx-auto px-4">
       <h2 class="text-3xl font-bold">Sell Smarter in California</h2>
       <p class="mt-4 text-neutral-700">Leverage James Baker’s proven process and track record:</p>
       <ul class="mt-4 list-decimal list-inside text-neutral-700 space-y-2">
-        <li><strong>Watch</strong> — 5-minute overview of the market and our listing process.</li>
-        <li><strong>Download</strong> — Free Home Seller Guide: checklist, timeline, net sheet basics.</li>
-        <li><strong>Strategize</strong> — Book a Zoom or in-person session to map pricing, prep, and marketing.</li>
-        <li><strong>List &amp; Launch</strong> — Prep, media, syndication, showings, negotiation, escrow, close.</li>
+        <li><strong>Watch</strong> — Get James’s 5-minute overview of the current CA market and our listing process.</li>
+        <li><strong>Download</strong> — Grab the California Home Seller Guide packed with checklists, timelines, net sheet basics, and more.</li>
+        <li><strong>Strategize</strong> — Pick a Zoom or in-person appointment to map pricing, prep, and marketing.</li>
+        <li><strong>List &amp; Launch</strong> — We execute: prep, media, syndication, showings, negotiation, escrow, close.</li>
       </ul>
-      <div class="mt-6 flex flex-col sm:flex-row gap-4">
-        <a href="../assets/seller-guide.pdf" target="_blank" rel="noopener"
-           class="inline-flex items-center justify-center rounded-xl px-5 py-3 bg-red-600 text-white font-semibold hover:bg-red-700 shadow">
-          Get the Free Seller Guide
-        </a>
-        <a href="../book/" class="inline-flex items-center justify-center rounded-xl px-5 py-3 bg-neutral-900 text-white font-semibold hover:bg-neutral-800 shadow">
-          Book a Strategy Session
-        </a>
-      </div>
-      <p class="mt-3 text-sm text-neutral-600">No obligation. We’ll never sell your data. CA sellers only.</p>
+      <p class="mt-6 text-neutral-700 max-w-md">No obligation. We’ll never sell your data. CA sellers only.</p>
     </div>
   </section>
 
@@ -138,6 +136,30 @@
     </div>
   </section>
 
+  <!-- CTA Band -->
+  <section id="book" class="py-12 bg-neutral-900 text-neutral-100">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold">Ready to sell smarter?</h2>
+      <p class="mt-3 text-neutral-300">Grab the free guide or book a strategy session with our team.</p>
+      <div class="mt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-4 justify-center">
+        <a href="assets/seller-guide.pdf" target="_blank" rel="noopener"
+           class="inline-flex items-center justify-center rounded-xl px-5 py-3 min-w-[220px] text-center bg-red-600 text-white font-semibold hover:bg-red-700 shadow">
+          Get the Free Seller Guide →
+        </a>
+        <a href="#book"
+           class="inline-flex items-center justify-center rounded-xl px-5 py-3 min-w-[220px] text-center bg-white text-neutral-900 font-semibold hover:bg-neutral-100 shadow">
+          Book a Strategy Session →
+        </a>
+      </div>
+      <p class="mt-2 text-sm text-neutral-400">
+        Looking for another county? 
+        <a href="https://www.car.org/en/marketdata/interactive/sellersguide" target="_blank" class="underline hover:no-underline text-red-400">
+          View the statewide C.A.R. Seller Guide →
+        </a>
+      </p>
+    </div>
+  </section>
+
   <!-- Reviews -->
   <section id="reviews" class="py-14 bg-neutral-50 border-y border-neutral-200">
     <div class="max-w-6xl mx-auto px-4">
@@ -145,7 +167,7 @@
       <div class="mt-8 grid md:grid-cols-3 gap-6">
         <figure class="p-6 rounded-2xl border border-neutral-200 bg-white shadow-sm">
           <blockquote class="text-neutral-800">“Professional, strategic, and communicative. We sold over asking with a smooth escrow.”</blockquote>
-          <figcaption class="mt-4 text-sm text-neutral-600">— Verified Review</figcaption>
+          <figcaption class="mt-4 text-sm text-neutral-600">— Verified Google Review</figcaption>
         </figure>
         <figure class="p-6 rounded-2xl border border-neutral-200 bg-white shadow-sm">
           <blockquote class="text-neutral-800">“James’s pricing and prep plan worked perfectly. Highly recommend.”</blockquote>
@@ -156,6 +178,12 @@
           <figcaption class="mt-4 text-sm text-neutral-600">— Repeat Client</figcaption>
         </figure>
       </div>
+      <p class="mt-6 text-center">
+        <a href="https://avjames.com/testimonials/" target="_blank" rel="noopener"
+           class="underline hover:no-underline text-red-600 font-medium">
+          See more testimonials →
+        </a>
+      </p>
     </div>
   </section>
 
@@ -193,7 +221,10 @@
         <div class="text-sm">Office: (661) 949-3000</div>
         <div class="text-sm">Website: <a href="https://avjames.com" class="underline" target="_blank" rel="noopener">avjames.com</a></div>
         <div class="text-sm">Email: <a href="mailto:avjames@live.com" class="underline">avjames@live.com</a></div>
-        <div class="text-sm mt-2">Equal Housing Opportunity</div>
+        <div class="flex items-center gap-2 text-sm mt-2">
+          <img src="assets/eho-logo.png" alt="Equal Housing Opportunity" class="h-5 w-auto">
+          <span>Equal Housing Opportunity</span>
+        </div>
       </div>
       <div>
         <div class="font-semibold">Your Representative</div>
@@ -204,11 +235,12 @@
       </div>
       <div class="text-sm">
         <div>© <span id="year">2025</span> James Baker Realty, Inc. All rights reserved.</div>
-        <div class="mt-2">Information deemed reliable but not guaranteed. Not legal or tax advice.</div>
-        <div class="mt-2">By engaging with us, you agree to be contacted about your real estate needs.</div>
+        <div class="mt-2">Not intended to solicit properties already listed or clients under contract. Information deemed reliable but not guaranteed. This is not legal or tax advice; consult your advisor.</div>
+        <div class="mt-2">By engaging with us, you agree to be contacted about your real estate needs. We respect your privacy.</div>
       </div>
     </div>
 
+    <!-- Floating Back to Top -->
     <a href="#top" id="backToTop"
        class="fixed bottom-6 right-6 hidden opacity-0 transition-opacity duration-300 inline-flex items-center justify-center w-12 h-12 rounded-full bg-red-600 text-white text-xl shadow-lg hover:bg-red-700">
       ↑
@@ -228,11 +260,17 @@
       }
       // Footer year
       document.getElementById('year').textContent = new Date().getFullYear();
-      // Back to top
+
+      // Back to Top button
       const backToTop = document.getElementById('backToTop');
       window.addEventListener('scroll', () => {
-        if (window.scrollY > 200) { backToTop.classList.remove('hidden'); backToTop.classList.add('opacity-100'); }
-        else { backToTop.classList.add('hidden'); backToTop.classList.remove('opacity-100'); }
+        if (window.scrollY > 200) {
+          backToTop.classList.remove('hidden');
+          backToTop.classList.add('opacity-100');
+        } else {
+          backToTop.classList.add('hidden');
+          backToTop.classList.remove('opacity-100');
+        }
       });
     </script>
   </footer>
@@ -240,11 +278,12 @@
 </body>
 </html>
 
-
-      
- 
-          
+     
+     
    
+   
+   
+
 
 
 
