@@ -384,20 +384,51 @@
         }
       });
 
-      // HYBRID Calendly: Popup on desktop, direct link on mobile
+      // HYBRID Calendly: Popup on mobile = direct link; desktop = popup with robust fallback
       (function () {
         const isMobile = /android|iphone|ipad|ipod/i.test(navigator.userAgent) || window.matchMedia('(max-width: 768px)').matches;
+
+        // Clear fallback when we know Calendly actually responded
+        function attachMessageOnce(clearFn){
+          function onMsg(event){
+            try{
+              const data = typeof event.data === 'string' ? JSON.parse(event.data) : event.data;
+              if (data && data.event && String(data.event).startsWith('calendly.')){
+                clearFn();
+                window.removeEventListener('message', onMsg);
+              }
+            }catch(_){}
+          }
+          window.addEventListener('message', onMsg);
+        }
+
         function openHybrid(e){
           const href = e.currentTarget.getAttribute('href');
+
+          // Mobile or widget not loaded: open in new tab (no preventDefault => fewer freezes)
           if (isMobile || !(window.Calendly && Calendly.initPopupWidget)) {
-            // Open in new tab (no preventDefault to avoid freezes)
-            e.currentTarget.setAttribute('target', '_blank');
-            e.currentTarget.setAttribute('rel', 'noopener');
+            e.currentTarget.setAttribute('target','_blank');
+            e.currentTarget.setAttribute('rel','noopener');
             return;
           }
+
+          // Desktop with widget → try popup, but guarantee a fallback new tab
           e.preventDefault();
-          try { Calendly.initPopupWidget({ url: href }); } catch(_) { window.open(href, '_blank', 'noopener'); }
+          let opened = false;
+          const fallback = () => { if (!opened) { opened = true; window.open(href, '_blank', 'noopener'); } };
+
+          // If Calendly doesn't react quickly, open new tab
+          const t = setTimeout(fallback, 800);
+          attachMessageOnce(() => { clearTimeout(t); opened = true; });
+
+          try {
+            Calendly.initPopupWidget({ url: href });
+          } catch(_) {
+            clearTimeout(t);
+            fallback();
+          }
         }
+
         document.addEventListener('DOMContentLoaded', () => {
           document.querySelectorAll('[data-calendly="open"]').forEach(el => {
             el.addEventListener('click', openHybrid, { passive: false });
@@ -415,11 +446,13 @@
 
 
 
+
      
      
    
    
    
+
 
 
 
